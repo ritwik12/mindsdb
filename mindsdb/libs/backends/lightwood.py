@@ -136,7 +136,7 @@ class LightwoodBackend():
 
         return config
 
-    def callback_on_iter(self, epoch, mix_error, test_error, delta_mean):
+    def callback_on_iter(self, epoch, mix_error, test_error, delta_mean, accuracy):
         test_error_pct = round(test_error * 100,2)
         self.transaction.log.debug(f'We\'ve reached training epoch nr {epoch} with an error of {test_error_pct}% on the testing dataset')
 
